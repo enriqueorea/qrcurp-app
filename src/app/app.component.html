@@ -1,10 +1,11 @@
-<header class="fixed w-full px-8 py-4 bg-slate-300/2 shadow-xl">
+<header class="sticky w-full px-8 py-4 bg-slate-300/2 z-0 shadow-xl">
   <h1 class="text-lg font-bold">QR CURP READER</h1>
 </header>
-<main class="w-full pt-16 h-[100vh]">
-  <section class="flex justify-center h-full items-center">
-    <form [formGroup]="personalInformationForm" class="w-[800px] h-auto  shadow-2xl rounded-3xl flex flex-col ">
-      <div class="w-full py-8 flex justify-around items-center">
+<main class="w-full pt-16  z-40 relative">
+  <section class="flex w-full justify-center h-full items-center">
+    <form [formGroup]="personalInformationForm"
+      class="max-w-[800px] w-full h-full  shadow-2xl rounded-3xl flex flex-col ">
+      <div class="w-full py-8 flex flex-col sm:flex-row justify-around items-center">
         <h3 class="text-2xl  font-semibold text-slate-950">Mi informacion</h3>
         <button type="button" (click)="startQrCodeScanner()"
           class="w-11 h-11 border rounded-full flex items-center justify-center shadow-lg hover:bg-slate-400 transition">
@@ -48,8 +49,8 @@
             <input formControlName="segundoApellido" matInput placeholder="Placeholder">
           </mat-form-field>
         </div>
-        <div class="flex justify-between items-center gap-5">
-          <div class="flex-1">
+        <div class="flex flex-col md:flex-row justify-between items-center md:gap-5">
+          <div class="flex-1 w-full">
             <label>
               <h4 class="text-sm font-semibold text-slate-950">Fecha de nacimiento</h4>
             </label>
@@ -62,7 +63,7 @@
               <mat-datepicker #picker1></mat-datepicker>
             </mat-form-field>
           </div>
-          <div class="flex-1">
+          <div class="flex-1 w-full">
             <label>
               <h4 class="text-sm font-semibold text-slate-950">Sexo</h4>
             </label>
