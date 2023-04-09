@@ -10,8 +10,8 @@ export interface PersonalInformation {
 }
 
 export interface Sexo {
-  value: 'h' | 'm';
-  viewValue: 'HOMBRE' | 'MUJER';
+  value: string;
+  viewValue: string;
 }
 
 export interface EntidadFederativa {

@@ -20,6 +20,7 @@ import {
 import { MatSelectModule } from '@angular/material/select';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,6 +35,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatSelectModule,
     MatNativeDateModule,
     MatIconModule,
+    MatSnackBarModule,
   ],
   providers: [
     {
